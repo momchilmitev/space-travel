@@ -1,2 +1,3 @@
-# calculator
-simple javascript calculator
+# SpaceTravel
+
+Multi-page space tourism website build with angular
