@@ -1,6 +1,15 @@
 /* --------------------- */
 /*         Reset         */
 /* --------------------- */
+:root {
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-dark: 0 0% 100%;
+}
+
+/* --------------------- */
+/*         Reset         */
+/* --------------------- */
 
 /*        Box sizing     */
 *,
@@ -59,8 +68,10 @@ select {
 }
 
 /* --------------------- */
-/*  Utility classes       */
+/*  Utility classes      */
 /* --------------------- */
+
+/*        general        */
 
 .flex {
   display: flex;
@@ -89,3 +100,13 @@ select {
   white-space: nowrap;
   width: 1px;
 }
+
+/*        colors        */
+
+.bg-dark { background-color: hsl( var(--clr-dark) ); }
+.bg-light { background-color: hsl( var(--clr-light) ); }
+.bg-white { background-color: hsl( var(--clr-white) ); }
+
+.text-dark { color: hsl( var(--clr-dark) ); }
+.text-light { color: hsl( var(--clr-light) ); }
+.text-white { color: hsl( var(--clr-white) ); }
