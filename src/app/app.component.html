@@ -1,3 +1,16 @@
 <router-outlet></router-outlet>
 <p>{{ title }}</p>
 <!-- <a href="#" class="large-btn upper ff-serif fs-600 text-dark bg-white">Explore</a> -->
+<nav>
+  <ul class="primary-nav underline-indicators flex">
+    <li class="active"><a class="upper text-white letter-2" href="#"><span>01</span>Active</a></li>
+    <li><a class="upper text-white letter-2" href="#"><span>02</span>Hovered</a></li>
+    <li><a class="upper text-white letter-2" href="#"><span>03</span>Idle</a></li>
+  </ul>
+</nav>
+
+<div class="tabs underline-indicators flex">
+  <button aria-selected="true" class="upper ff-sans-cond text-light bg-dark letter-2">Moon</button>
+  <button aria-selected="false" class="upper ff-sans-cond text-light bg-dark letter-2">Mars</button>
+  <button aria-selected="false" class="upper ff-sans-cond text-light bg-dark letter-2">Europa</button>
+</div>
