@@ -1,49 +1,104 @@
 /* --------------------- */
+/*         Fonts         */
+/* --------------------- */
+@font-face {
+  font-family: "Bellefair";
+  src: url('assets/fonts/Bellefair-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url('assets/fonts/Barlow-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url('assets/fonts/BarlowCondensed-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --------------------- */
 /*         Reset         */
 /* --------------------- */
 :root {
+  /* colors */
   --clr-dark: 230 35% 7%;
   --clr-light: 231 77% 90%;
-  --clr-dark: 0 0% 100%;
+  --clr-white: 0 0% 100%;
+
+  /* font-families */
+  --ff-serif: "Bellefair", serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  --ff-sans-normal: "Barlow", sans-serif;
+
+  /* font-sizes */
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.125rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
 }
 
 /* --------------------- */
 /*         Reset         */
 /* --------------------- */
 
-/*        Box sizing     */
+/* box sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/*      Reset Margin     */
+/* reset margin */
 body,
 h1,
 h2,
 h3,
 h4,
 h5,
+p,
 figure,
 picture {
   margin: 0;
 }
 
-/*    Set up the body    */
+/* reset font weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-weight: 400;
+}
+
+/* set up the body */
 body {
+  background-color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-white));
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs-400);
   line-height: 1.5;
   min-height: 100vh;
 }
 
-/* Make images easier to work with */
+/* make images easier to work with */
 img,
 picture {
   display: block;
   max-width: 100%;
 }
 
-/* Make forms easier to work with */
+/* make forms easier to work with */
 button,
 input,
 textarea,
@@ -51,7 +106,7 @@ select {
   font:  inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+/* remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   /* html:focus-within {
    scroll-behavior: auto;
@@ -71,7 +126,7 @@ select {
 /*  Utility classes      */
 /* --------------------- */
 
-/*        general        */
+/* general */
 
 .flex {
   display: flex;
@@ -101,7 +156,7 @@ select {
   width: 1px;
 }
 
-/*        colors        */
+/* colors */
 
 .bg-dark { background-color: hsl( var(--clr-dark) ); }
 .bg-light { background-color: hsl( var(--clr-light) ); }
@@ -110,3 +165,29 @@ select {
 .text-dark { color: hsl( var(--clr-dark) ); }
 .text-light { color: hsl( var(--clr-light) ); }
 .text-white { color: hsl( var(--clr-white) ); }
+
+/* typography */
+
+.ff-serif { font-family: var(--ff-serif); }
+.ff-sans-cond { font-family: var(--ff-sans-cond); }
+.ff-sans-normal { font-family: var(--ff-sans-normal); }
+
+.letter-1 { letter-spacing: 4.75px; }
+.letter-2 { letter-spacing: 2.7px; }
+.letter-3 { letter-spacing: 2.35px; }
+
+.upper { text-transform: uppercase; }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 { line-height: 1.1 }
