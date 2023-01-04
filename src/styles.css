@@ -217,16 +217,14 @@ select {
 /* --------------------- */
 /*       Components      */
 /* --------------------- */
-.large-btn {
-  /* aspect-ratio: 1; */
+/* .large-btn {
+  aspect-ratio: 1;
   border-radius: 50%;
-  display: grid;
-  height: 274px;
-  /* padding: 0 2em; */
+  display: inline-grid;
+  padding: 0 2em;
   place-items: center;
   position: relative;
   text-decoration: none;
-  width: 274px;
   z-index: 1;
 }
 
@@ -246,7 +244,7 @@ select {
 .large-btn:focus::after {
   opacity: 1;
   transform: scale(1.5);
-}
+} */
 
 .primary-nav {
   --gap: 8rem;
