@@ -308,9 +308,33 @@ select {
 .primary-nav {
   --gap: 8rem;
   --underline-gap: 2rem;
+  background: hsl( var(--clr-dark) / 0.95);
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-nav {
+    background: hsl( var(--clr-white) / 0.05);
+    backdrop-filter: blur(1.5rem);
+  }
+}
+
+@media (max-width: 35rem) {
+  .primary-nav {
+    --gap: .5rem;
+    --underline-gap: .5rem;
+    flex-direction: column;
+    inset: 0 0 0 30%;
+    padding: min(20rem, 15vh) 2rem;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .primary-nav.underline-indicators > .active {
+    border: 0;
+  }
 }
 
 .primary-nav a {

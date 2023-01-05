@@ -2,8 +2,11 @@
   <div>
     <img src="assets/images/shared/logo.svg" alt="space travel logo" class="logo">
   </div>
+  <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+    <span class="sr-only" aria-expanded="false">Menu</span>
+  </button>
   <nav>
-    <ul class="primary-nav underline-indicators flex">
+    <ul id="primary-navigation" class="primary-nav underline-indicators flex">
       <li class="active"><a class="ff-sans-cond upper text-white letter-2" routerLink=""><span>00</span>Home</a></li>
       <li><a class="ff-sans-cond upper text-white letter-2" routerLink="destination"><span>01</span>Destination</a></li>
       <li><a class="ff-sans-cond upper text-white letter-2" routerLink="crew"><span>02</span>Crew</a></li>
