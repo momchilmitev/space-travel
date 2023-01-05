@@ -306,8 +306,12 @@ select {
   transform: scale(1.5);
 } */
 
+.logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
 .primary-nav {
-  --gap: 8rem;
+  --gap: 2rem;
   --underline-gap: 2rem;
   background: hsl( var(--clr-dark) / 0.95);
   list-style: none;
@@ -315,8 +319,17 @@ select {
   padding: 0;
 }
 
+.primary-nav a {
+  text-decoration: none;
+}
+
+.primary-nav a > span {
+  font-weight: 700;
+  margin-right: .5em;
+}
+
 .mobile-nav-toggle {
-  display: noe;
+  display: none;
 }
 
 @supports (backdrop-filter: blur(1rem)) {
@@ -371,13 +384,36 @@ select {
   }
 }
 
-.primary-nav a {
-  text-decoration: none;
+@media (min-width: 35em) and (max-width: 44.999em) {
+  .primary-nav {
+    padding: 0 3rem;
+  }
+
+  .primary-nav a > span {
+    display: none;
+  }
 }
 
-.primary-nav a > span {
-  font-weight: 700;
-  margin-right: .5em;
+@media (min-width: 45em) {
+  .primary-header::after {
+    content: '';
+    background: hsl(var(--clr-white) / .25);
+    display: block;
+    height: 1px;
+    margin-right: -2.5rem;
+    order: 1;
+    position: relative;
+    width: 100%;
+  }
+
+  nav {
+    order: 2;
+  }
+
+  .primary-nav {
+    margin-block: 2rem;
+    padding: 0 clamp(3rem, 7vw, 6rem);
+  }
 }
 
 .underline-indicators > * {
