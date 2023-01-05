@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  isNavigationVisible: boolean = false;
 
+  toggleNavigation (): void {
+    this.isNavigationVisible = !this.isNavigationVisible;
+  }
 }
