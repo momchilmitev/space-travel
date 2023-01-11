@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DestinationComponent } from './destination.component'
 
 const routes: Routes = [
   {
-    path: 'destinations', loadChildren: () => import('./destination.module').then(m => m.DestinationModule)
+    path: '', component: DestinationComponent
   }
 ];
 
