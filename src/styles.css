@@ -189,7 +189,7 @@ select {
   place-items: center;
 }
 
-.grid-container * {
+.grid-container p:not([class]) {
   max-width: 50ch;
 }
 
@@ -278,7 +278,7 @@ select {
   }
 
   .destination-meta {
-    --gap: 6rem;
+    --gap: min(6vw ,6rem);
     justify-content: start;
   }
 }
