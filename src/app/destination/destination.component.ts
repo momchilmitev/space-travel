@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-destination',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./destination.component.css']
 })
 export class DestinationComponent {
-
+  constructor (@Inject(DOCUMENT) private document: any) {
+    this.document.body.classList = '';
+    this.document.body.classList.add('destination')
+  }
 }

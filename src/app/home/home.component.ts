@@ -8,6 +8,7 @@ import { Component, Inject } from '@angular/core';
 })
 export class HomeComponent {
   constructor(@Inject(DOCUMENT) private document: any) {
+    this.document.body.classList = '';
     this.document.body.classList.add('home')
   }
 }
