@@ -11,6 +11,7 @@ import { Destination } from '@types'
 })
 export class DestinationComponent implements OnInit {
   destinstions: Destination[] = [];
+  currentDestination!: Destination;
 
   constructor (@Inject(DOCUMENT) private document: any, private destinationService: DestinationService) {
     this.document.body.classList = '';
@@ -18,9 +19,14 @@ export class DestinationComponent implements OnInit {
   }
   ngOnInit (): void {
     this.getDestinations();
+    this.currentDestination = this.destinstions[0]
   }
 
   getDestinations(): void {
     this.destinstions = this.destinationService.getDestinations();
+  }
+
+  changeDestination(index: number): void {
+    this.currentDestination = this.destinstions[index];
   }
 }

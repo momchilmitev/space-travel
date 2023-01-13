@@ -3,31 +3,30 @@
     <span aria-hidden="true">01</span>Pick your destination
   </h1>
   <picture>
-    <source srcset="assets/images/destination/image-moon.webp" type="image/webp">
-    <img src="assets/images/destination/image-moon.png" alt="the moon">
+    <source srcset="{{ currentDestination.images.webp }}" type="image/webp">
+    <img src="{{ currentDestination.images.png }}" alt="the moon">
   </picture>
   <div class="tabs underline-indicators flex">
-    <button aria-selected="true" class="upper ff-sans-cond text-light letter-2">Moon</button>
-    <button aria-selected="false" class="upper ff-sans-cond text-light letter-2">Mars</button>
-    <button aria-selected="false" class="upper ff-sans-cond text-light letter-2">Europa</button>
-    <button aria-selected="false" class="upper ff-sans-cond text-light letter-2">Titan</button>
+    <button aria-selected="true" class="upper ff-sans-cond text-light letter-2" (click)="changeDestination(0)">Moon</button>
+    <button aria-selected="false" class="upper ff-sans-cond text-light letter-2" (click)="changeDestination(1)">Mars</button>
+    <button aria-selected="false" class="upper ff-sans-cond text-light letter-2" (click)="changeDestination(2)">Europa</button>
+    <button aria-selected="false" class="upper ff-sans-cond text-light letter-2" (click)="changeDestination(3)">Titan</button>
   </div>
   <article class="destination-info">
-    <h2 class="fs-800 upper ff-serif">Moon</h2>
+    <h2 class="fs-800 upper ff-serif">{{ currentDestination.name }}</h2>
 
     <p>
-      See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed.
-      While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+      {{ currentDestination.description }}
     </p>
 
     <div class="destination-meta flex">
       <div>
         <h3 class="text-light fs-200 upper">Adg. distance</h3>
-        <p class="ff-serif upper">384, 400 km</p>
+        <p class="ff-serif upper">{{ currentDestination.distance }}</p>
       </div>
       <div>
         <h3 class="text-light fs-200 upper">Est. travel time</h3>
-        <p class="ff-serif upper">3 days</p>
+        <p class="ff-serif upper">{{ currentDestination.travel }}</p>
       </div>
     </div>
   </article>
