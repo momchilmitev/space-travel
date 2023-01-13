@@ -10,8 +10,9 @@ import { Destination } from '@types'
   styleUrls: ['./destination.component.css']
 })
 export class DestinationComponent implements OnInit {
-  destinstions: Destination[] = [];
+  destinations: Destination[] = [];
   currentDestination!: Destination;
+  currentIndex: number = 0;
 
   constructor (@Inject(DOCUMENT) private document: any, private destinationService: DestinationService) {
     this.document.body.classList = '';
@@ -19,14 +20,15 @@ export class DestinationComponent implements OnInit {
   }
   ngOnInit (): void {
     this.getDestinations();
-    this.currentDestination = this.destinstions[0]
+    this.currentDestination = this.destinations[0]
   }
 
   getDestinations(): void {
-    this.destinstions = this.destinationService.getDestinations();
+    this.destinations = this.destinationService.getDestinations();
   }
 
   changeDestination(index: number): void {
-    this.currentDestination = this.destinstions[index];
+    this.currentDestination = this.destinations[index];
+    this.currentIndex = index;
   }
 }
