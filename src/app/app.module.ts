@@ -4,17 +4,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared';
-import { HomeModule } from './home';
+import { CrewModule } from './crew';
 import { DestinationModule } from './destination/destination.module';
+import { HomeModule } from './home';
+import { SharedModule } from './shared';
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
+    CrewModule,
     DestinationModule,
     HomeModule,
     HttpClientModule,

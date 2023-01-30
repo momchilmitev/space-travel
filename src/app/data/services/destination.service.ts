@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 import { Destination } from '../types/destination'
 import { DESTINATIONS } from '../mock-destinations'
@@ -8,7 +7,7 @@ import { DESTINATIONS } from '../mock-destinations'
   providedIn: 'root',
 })
 export class DestinationService {
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   getDestinations(): Destination[] {
     return DESTINATIONS;
