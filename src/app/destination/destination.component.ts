@@ -1,7 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 
-import { DestinationService } from'@services'
+import { DestinationService } from '@services'
 import { Destination } from '@types'
 
 @Component({

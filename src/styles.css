@@ -577,3 +577,20 @@ select {
     background-image: url('/assets/images/destination/background-destination-desktop.jpg');
   }
 }
+
+.crew {
+  background-image: url('/assets/images/crew/background-crew-mobile.jpg');
+}
+
+@media (min-width: 35em) {
+  .crew {
+    background-image: url('/assets/images/crew/background-crew-tablet.jpg');
+    background-position: center center;
+  }
+}
+
+@media (min-width: 45em) {
+  .crew {
+    background-image: url('/assets/images/crew/background-crew-desktop.jpg');
+  }
+}
