@@ -1,1 +1,27 @@
-<p>crew works!</p>
+<main id="main" class="grid-container grid-container--crew flow">
+  <h1 class="numbered-title">
+    <span aria-hidden="true">02</span>Meet your crew
+  </h1>
+  <picture>
+    <source srcset="{{ currentMember.images.webp }}" type="image/webp">
+    <img src="{{ currentMember.images.png }}" alt="the moon">
+  </picture>
+  <article class="destination-info">
+    <h2 class="fs-800 upper ff-serif">{{ currentMember.role }}</h2>
+    <h3>{{ currentMember.name }}</h3>
+
+    <p>
+      {{ currentMember.bio }}
+    </p>
+
+    <div class="dot-indicators flex">
+      <button
+        *ngFor="let member of crew; let i = index"
+        [attr.aria-selected]="crew.indexOf(member) === currentIndex"
+        (click)="changeMember(i)"
+      >
+        <span class="sr-only">{{ member.name }}</span>
+      </button>
+    </div>
+  </article>
+</main>
