@@ -12,6 +12,9 @@ const routes: Routes = [
   {
     path: 'crew', loadChildren: () => import('./crew/crew.module').then(m => m.CrewModule)
   },
+  {
+    path: 'technology', loadChildren: () => import('./technology/technology.module').then(m => m.TechnologyModule)
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

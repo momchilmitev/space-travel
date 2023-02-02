@@ -8,6 +8,7 @@ import { CrewModule } from './crew';
 import { DestinationModule } from './destination/destination.module';
 import { HomeModule } from './home';
 import { SharedModule } from './shared';
+import { TechnologyModule } from './technology';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SharedModule } from './shared';
     HomeModule,
     HttpClientModule,
     SharedModule,
+    TechnologyModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
