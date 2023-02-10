@@ -6,22 +6,20 @@
     <source srcset="{{ currentMember.images.webp }}" type="image/webp">
     <img src="{{ currentMember.images.png }}" alt="the moon">
   </picture>
-  <article class="destination-info">
-    <h2 class="fs-800 upper ff-serif">{{ currentMember.role }}</h2>
-    <h3>{{ currentMember.name }}</h3>
-
-    <p>
+  <div class="dot-indicators flex">
+    <button
+      *ngFor="let member of crew; let i = index"
+      [attr.aria-selected]="crew.indexOf(member) === currentIndex"
+      (click)="changeMember(i)"
+    >
+      <span class="sr-only">{{ member.name }}</span>
+    </button>
+  </div>
+  <article class="crew-info flow">
+    <h2 class="fs-500 upper ff-serif">{{ currentMember.role }}</h2>
+    <h3 class="fs-700 upper ff-serif">{{ currentMember.name }}</h3>
+    <p class="fs-400">
       {{ currentMember.bio }}
     </p>
-
-    <div class="dot-indicators flex">
-      <button
-        *ngFor="let member of crew; let i = index"
-        [attr.aria-selected]="crew.indexOf(member) === currentIndex"
-        (click)="changeMember(i)"
-      >
-        <span class="sr-only">{{ member.name }}</span>
-      </button>
-    </div>
   </article>
 </main>

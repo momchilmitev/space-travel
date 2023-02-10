@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 import { CrewService } from "@services";
@@ -7,7 +7,8 @@ import { Member } from "@types";
 @Component({
   selector: 'app-crew',
   templateUrl: './crew.component.html',
-  styleUrls: ['./crew.component.css']
+  styleUrls: ['./crew.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class CrewComponent implements OnInit {
   crew: Member[] = [];
