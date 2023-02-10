@@ -68,4 +68,25 @@
   .crew {
     background-image: url('/assets/images/crew/background-crew-desktop.jpg');
   }
+
+  .grid-container--crew {
+    padding: 0;
+    grid-template-areas:
+      '. title image .'
+      '. content image .'
+      '. dots image .'
+    ;
+  }
+  
+  .grid-container--crew > .dot-indicators {
+    justify-self: start;
+  }
+  
+  .grid-container--crew > .crew-info {
+    justify-self: start;
+  }
+
+  .grid-container--crew > picture {
+    align-self: self-end;
+  }
 }
