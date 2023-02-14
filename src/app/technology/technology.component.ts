@@ -1,5 +1,5 @@
 import { DOCUMENT } from "@angular/common";
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { TechnologyService } from "@services";
 import { Technology } from "@types";
@@ -7,7 +7,8 @@ import { Technology } from "@types";
 @Component({
   selector: 'app-technology',
   templateUrl: './technology.component.html',
-  styleUrls: ['./technology.component.css']
+  styleUrls: ['./technology.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class TechnologyComponent implements OnInit {
   technologies: Technology[] = [];

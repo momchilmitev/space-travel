@@ -1,10 +1,10 @@
-<main id="main" class="grid-container grid-container--technology flow">
+<main id="main" class="grid-container grid-container--technology">
   <h1 class="numbered-title">
     <span aria-hidden="true">03</span>Space launch 101
   </h1>
   <picture>
     <source srcset="" type="image/webp">
-    <img src="" alt="the moon">
+    <img src="{{ currentTechnology.images.landscape }}" alt="{{ currentTechnology.name }}">
   </picture>
   <div class="circle-indicators flex">
     <!-- <button
@@ -16,9 +16,9 @@
       {{ destination.name }}
     </button> -->
   </div>
-  <article class="destination-info">
-    <h2 class="fs-800 upper ff-serif"></h2>
-    <h3></h3>
-    <p></p>
+  <article class="technology-info flow">
+    <h2 class="upper fs-400">The terminology…</h2>
+    <h3 class="upper fs-700">{{ currentTechnology.name }}</h3>
+    <p>{{ currentTechnology.description }}</p>
   </article>
 </main>
