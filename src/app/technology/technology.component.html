@@ -6,15 +6,14 @@
     <source srcset="" type="image/webp">
     <img src="{{ currentTechnology.images.landscape }}" alt="{{ currentTechnology.name }}">
   </picture>
-  <div class="circle-indicators flex">
-    <!-- <button
-      *ngFor="let destination of destinations; let i = index"
-      [attr.aria-selected]="destinations.indexOf(destination) === currentIndex"
-      class="upper ff-sans-cond text-light letter-2"
-      (click)="changeDestination(i)"
+  <div class="number-indicators flex">
+    <button
+      *ngFor="let technology of technologies; let i = index"
+      [attr.aria-selected]="technologies.indexOf(technology) === currentIndex"
+      (click)="changeTechnology(i)"
     >
-      {{ destination.name }}
-    </button> -->
+      {{ i + 1 }}
+    </button>
   </div>
   <article class="technology-info flow">
     <h2 class="upper fs-400">The terminology…</h2>
