@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { DestinationService } from '@services'
 import { Destination } from '@types'
@@ -7,7 +7,8 @@ import { Destination } from '@types'
 @Component({
   selector: 'app-destination',
   templateUrl: './destination.component.html',
-  styleUrls: ['./destination.component.css']
+  styleUrls: ['./destination.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class DestinationComponent implements OnInit {
   destinations: Destination[] = [];
