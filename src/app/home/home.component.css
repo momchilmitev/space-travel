@@ -1,0 +1,16 @@
+.home {
+  background-image: url('/assets/images/home/background-home-mobile.jpg');
+}
+
+@media (min-width: 35em) {
+  .home {
+    background-image: url('/assets/images/home/background-home-tablet.jpg');
+    background-position: center center;
+  }
+}
+
+@media (min-width: 45em) {
+  .home {
+    background-image: url('/assets/images/home/background-home-desktop.jpg');
+  }
+}
