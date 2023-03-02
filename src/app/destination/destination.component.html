@@ -6,23 +6,16 @@
     <source srcset="{{ currentDestination.images.webp }}" type="image/webp">
     <img src="{{ currentDestination.images.png }}" alt="the moon">
   </picture>
-  <div class="tabs underline-indicators flex">
-    <button
-      *ngFor="let destination of destinations; let i = index"
-      [attr.aria-selected]="destinations.indexOf(destination) === currentIndex"
-      class="upper ff-sans-cond text-light letter-2"
-      (click)="changeDestination(i)"
-    >
-      {{ destination.name }}
-    </button>
-  </div>
+  <app-underline-indicators
+    [destinations]="destinations"
+    [currentIndex]="currentIndex"
+    (changeDestination)="changeDestination($event)"
+  ></app-underline-indicators>
   <article class="destination-info">
     <h2 class="fs-800 upper ff-serif">{{ currentDestination.name }}</h2>
-
     <p>
       {{ currentDestination.description }}
     </p>
-
     <div class="destination-meta flex">
       <div>
         <h3 class="text-light fs-200 upper">Adg. distance</h3>

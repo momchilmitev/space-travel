@@ -1,0 +1,10 @@
+<div class="tabs underline-indicators flex">
+  <button
+    *ngFor="let destination of destinations; let i = index"
+    [attr.aria-selected]="destinations.indexOf(destination) === currentIndex"
+    class="upper ff-sans-cond text-light letter-2"
+    (click)="changeDestination.emit(i)"
+  >
+    {{ destination.name }}
+  </button>
+</div>

@@ -197,49 +197,10 @@ select {
   grid-area: title;
 }
 
-.grid-container--destination {
-  --flow-space: 2rem;
-  grid-template-areas:
-    'title'
-    'image'
-    'tabs'
-    'content'
-  ;
-}
-
-.grid-container--destination > picture {
-  grid-area: image;
-  max-width: 60%;
-}
-
-.grid-container--destination > .tabs {
-  grid-area: tabs;
-}
-
-.grid-container--destination > .destination-info {
-  grid-area: content;
-}
-
-.destination-meta {
-  border-top: 1px solid hsl( var(--clr-white) / .1);
-  flex-direction: column;
-  margin-top: 2rem;
-  padding-top: 2rem;
-}
-
-.destination-meta p {
-  font-size: 1.75rem;
-}
-
 @media (min-width: 35em) {
   .numbered-title {
     justify-self: start;
     margin-top: 2rem;
-  }
-
-  .destination-meta {
-    flex-direction: row;
-    justify-content: space-evenly;
   }
 }
 
@@ -261,25 +222,6 @@ select {
   
   .grid-container--home > *:last-child {
     grid-column: 3;
-  }
-
-  .grid-container--destination {
-    justify-items: start;
-    align-content: start;
-    grid-template-areas:
-      '. title title .'
-      '. image tabs .'
-      '. image content .'
-    ;
-  }
-
-  .grid-container--destination > picture {
-    max-width: 90%;
-  }
-
-  .destination-meta {
-    --gap: min(6vw ,6rem);
-    justify-content: start;
   }
 }
 
@@ -364,34 +306,6 @@ select {
 /* --------------------- */
 /*       Components      */
 /* --------------------- */
-/* .large-btn {
-  aspect-ratio: 1;
-  border-radius: 50%;
-  display: inline-grid;
-  padding: 0 2em;
-  place-items: center;
-  position: relative;
-  text-decoration: none;
-  z-index: 1;
-}
-
-.large-btn::after {
-  background-color: hsl(var(--clr-white) / .15);
-  border-radius: 50%;
-  content: '';
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  transition: opacity 500ms linear, transform 500ms ease-in-out;
-  width: 100%;
-  z-index: -1;
-}
-
-.large-btn:hover::after,
-.large-btn:focus::after {
-  opacity: 1;
-  transform: scale(1.5);
-} */
 
 .logo {
   margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
@@ -501,24 +415,6 @@ select {
     margin-block: 2rem;
     padding: 0 clamp(3rem, 7vw, 6rem);
   }
-}
-
-.underline-indicators > * {
-  border: 0;
-  cursor: pointer;
-  padding: var(--underline-gap, .5rem) 0;
-  background-color: transparent;
-  border-bottom: .2rem solid hsl(var(--clr-white) / 0);
-}
-
-.underline-indicators > *:hover,
-.underline-indicators > *:focus {
-  border-color: hsl(var(--clr-white) / .5);
-}
-
-.underline-indicators > .active,
-.underline-indicators > [aria-selected="true"] {
-  border-color: hsl(var(--clr-white) / 1);
 }
 
 /* .tabs {

@@ -1,0 +1,17 @@
+.underline-indicators > * {
+  border: 0;
+  cursor: pointer;
+  padding: var(--underline-gap, .5rem) 0;
+  background-color: transparent;
+  border-bottom: .2rem solid hsl(var(--clr-white) / 0);
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl(var(--clr-white) / .5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+  border-color: hsl(var(--clr-white) / 1);
+}
