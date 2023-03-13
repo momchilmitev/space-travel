@@ -47,4 +47,18 @@
   .technology {
     background-image: url('/assets/images/technology/background-technology-desktop.jpg');
   }
+
+  .grid-container--technology {
+    grid-template-columns: minmax(2rem, 1fr) minmax(0, 10rem) repeat(2, minmax(0, 40rem));
+    grid-template-areas:
+      '. title title .'
+      '. numbers content image'
+    ;
+  }
+
+  .grid-container--technology > picture > img {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
 }

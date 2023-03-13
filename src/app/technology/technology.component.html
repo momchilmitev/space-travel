@@ -3,8 +3,9 @@
     <span aria-hidden="true">03</span>Space launch 101
   </h1>
   <picture>
-    <source srcset="" type="image/webp">
-    <img src="{{ currentTechnology.images.landscape }}" alt="{{ currentTechnology.name }}">
+    <source srcset="{{ currentTechnology.images.landscape }}" media="(max-width: 44.9rem)">
+    <source srcset="{{ currentTechnology.images.portrait }}" media="(min-width: 45rem)">
+    <img src="{{ currentTechnology.images.portrait }}" alt="{{ currentTechnology.name }}">
   </picture>
   <div class="number-indicators flex">
     <button
