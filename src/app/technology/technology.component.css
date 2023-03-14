@@ -76,6 +76,8 @@
       '. title title .'
       '. numbers content image'
     ;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .grid-container--technology > picture > img {
