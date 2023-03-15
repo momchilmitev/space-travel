@@ -1,5 +1,5 @@
 .crew {
-  background-image: url('/assets/images/crew/background-crew-mobile.jpg');
+  background-image: url('../../assets/images/crew/background-crew-mobile.jpg');
   background-repeat: no-repeat;
 }
 
@@ -42,7 +42,7 @@
 
 @media (min-width: 35em) {
   .crew {
-    background-image: url('/assets/images/crew/background-crew-tablet.jpg');
+    background-image: url('../../assets/images/crew/background-crew-tablet.jpg');
     background-position: center center;
   }
 
@@ -66,7 +66,7 @@
 
 @media (min-width: 45em) {
   .crew {
-    background-image: url('/assets/images/crew/background-crew-desktop.jpg');
+    background-image: url('../../assets/images/crew/background-crew-desktop.jpg');
   }
 
   .grid-container--crew {
