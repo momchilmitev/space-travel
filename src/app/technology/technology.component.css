@@ -85,4 +85,14 @@
     max-width: 100%;
     margin-left: 0;
   }
+
+  .number-indicators {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .number-indicators > * {
+    height: 50px;
+    width: 50px;
+  }
 }
